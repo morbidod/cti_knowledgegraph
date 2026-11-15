@@ -1,0 +1,11 @@
+# Credenziali e variabili di ambiente
+.env
+.venv-ind
+config.ini
+temp
+data
+Configuration
+
+*.csv
+*.xlsx
+*.json

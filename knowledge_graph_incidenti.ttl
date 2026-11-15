@@ -1,0 +1,587 @@
+@prefix ex: <http://tesi.example.org/ontology/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:Company_Agribio_Consorzio_Cooperativo a ex:Company ;
+    ex:denominazione "AgriBio Consorzio Cooperativo"^^xsd:string ;
+    ex:dimensioneAziendale ex:Dimensione_MEDIA ;
+    ex:hasAssignedSector ex:Sector_Tecnologico ;
+    ex:hasIncident ex:Incident_Inc_2026_0031 .
+
+ex:Company_Banca_Popolare_Dell_Adriatico_S_C_A_R_L a ex:Company ;
+    ex:denominazione "Banca Popolare dell'Adriatico S.c.a.r.l."^^xsd:string ;
+    ex:dimensioneAziendale ex:Dimensione_PICCOLA ;
+    ex:hasAssignedSector ex:Sector_Finanza_E_Assicurazioni ;
+    ex:hasIncident ex:Incident_Inc_2025_0022 .
+
+ex:Company_Ciarcia_Nunzio a ex:Company ;
+    ex:denominazione "Ciarcia Nunzio"^^xsd:string ;
+    ex:dimensioneAziendale ex:Dimensione_PICCOLA ;
+    ex:hasAssignedSector ex:Sector_Tecnologico ;
+    ex:hasIncident ex:Incident_Inc_2025_0019 .
+
+ex:Company_Cooperativa_Servizi_Ambientali_S_C_A_R_L a ex:Company ;
+    ex:denominazione "Cooperativa Servizi Ambientali S.c.a.r.l."^^xsd:string ;
+    ex:dimensioneAziendale ex:Dimensione_PICCOLA ;
+    ex:hasAssignedSector ex:Sector_Energia ;
+    ex:hasIncident ex:Incident_Inc_2026_0007 .
+
+ex:Company_Emilia_Food_Trading_S_R_L a ex:Company ;
+    ex:denominazione "Emilia Food Trading S.r.l."^^xsd:string ;
+    ex:dimensioneAziendale ex:Dimensione_GRANDE ;
+    ex:hasAssignedSector ex:Sector_Commercio_All_Ingrosso_E_Al_Dettaglio ;
+    ex:hasIncident ex:Incident_Inc_2025_0034 .
+
+ex:Company_Reti___Fibra_Connessioni_S_R_L a ex:Company ;
+    ex:denominazione "Reti & Fibra Connessioni S.r.l."^^xsd:string ;
+    ex:dimensioneAziendale ex:Dimensione_PICCOLA ;
+    ex:hasAssignedSector ex:Sector_Tecnologico ;
+    ex:hasIncident ex:Incident_Inc_2025_0050 .
+
+ex:Company_Salus_Medica_Diagnostica_S_R_L a ex:Company ;
+    ex:denominazione "Salus Medica Diagnostica S.r.l."^^xsd:string ;
+    ex:dimensioneAziendale ex:Dimensione_PICCOLA ;
+    ex:hasAssignedSector ex:Sector_Sanità ;
+    ex:hasIncident ex:Incident_Inc_2025_0030 .
+
+ex:Incident_Inc_2024_0002 a ex:SecurityIncident ;
+    ex:hasThreat ex:Threat_Phishing___Social_Engineering__Mitre_T1566___Phishing___Enisa_Social_Engineering ;
+    ex:incidentDate "2026-01-24"^^xsd:date ;
+    ex:incidentId "INC-2024-0002"^^xsd:string ;
+    ex:involvesSector ex:Sector_Costruzioni ;
+    ex:targetsCompany ex:Company_Costruzioni_Stamera_S_R_L .
+
+ex:Incident_Inc_2024_0004 a ex:SecurityIncident ;
+    ex:hasThreat ex:Threat_Ransomware__Mitre_T1486___Data_Encrypted_For_Impact___Enisa_Threat_Landscape ;
+    ex:incidentDate "2025-03-08"^^xsd:date ;
+    ex:incidentId "INC-2024-0004"^^xsd:string ;
+    ex:involvesSector ex:Sector_Sanità ;
+    ex:targetsCompany ex:Company_Pharmacare_Distribuzione_S_R_L .
+
+ex:Incident_Inc_2024_0005 a ex:SecurityIncident ;
+    ex:hasThreat ex:Threat_Phishing___Social_Engineering__Mitre_T1566___Phishing___Enisa_Social_Engineering ;
+    ex:incidentDate "2024-08-11"^^xsd:date ;
+    ex:incidentId "INC-2024-0005"^^xsd:string ;
+    ex:involvesSector ex:Sector_Turismo_E_Ristorazione ;
+    ex:targetsCompany ex:Company_Il_Poeta_Contadino_Di_Marco_Leonardo_Antonio .
+
+ex:Incident_Inc_2024_0008 a ex:SecurityIncident ;
+    ex:hasThreat ex:Threat_Business_Email_Compromise__Mitre_T1534___Internal_Spearphishing___Enisa_Bec ;
+    ex:incidentDate "2026-04-05"^^xsd:date ;
+    ex:incidentId "INC-2024-0008"^^xsd:string ;
+    ex:involvesSector ex:Sector_Commercio_All_Ingrosso_E_Al_Dettaglio ;
+    ex:targetsCompany ex:Company_Smart_Retail_System_S_R_L .
+
+ex:Incident_Inc_2024_0010 a ex:SecurityIncident ;
+    ex:hasThreat ex:Threat_Business_Email_Compromise__Mitre_T1534___Internal_Spearphishing___Enisa_Bec ;
+    ex:incidentDate "2024-12-10"^^xsd:date ;
+    ex:incidentId "INC-2024-0010"^^xsd:string ;
+    ex:involvesSector ex:Sector_Commercio_All_Ingrosso_E_Al_Dettaglio ;
+    ex:targetsCompany ex:Company_Smart_Retail_System_S_R_L .
+
+ex:Incident_Inc_2024_0014 a ex:SecurityIncident ;
+    ex:hasThreat ex:Threat_Ot_Scada_Disruption__Mitre_Att_Ck_For_Ics___Enisa_Critical_Infrastructure_Attack ;
+    ex:incidentDate "2024-10-27"^^xsd:date ;
+    ex:incidentId "INC-2024-0014"^^xsd:string ;
+    ex:involvesSector ex:Sector_Costruzioni ;
+    ex:targetsCompany ex:Company_Edilizia_Moderna_Veneta_S_P_A .
+
+ex:Incident_Inc_2024_0017 a ex:SecurityIncident ;
+    ex:hasThreat ex:Threat_Phishing___Social_Engineering__Mitre_T1566___Phishing___Enisa_Social_Engineering ;
+    ex:incidentDate "2026-06-06"^^xsd:date ;
+    ex:incidentId "INC-2024-0017"^^xsd:string ;
+    ex:involvesSector ex:Sector_Turismo_E_Ristorazione ;
+    ex:targetsCompany ex:Company_Tuzi_Fabio___Valle_Del_Rio .
+
+ex:Incident_Inc_2024_0023 a ex:SecurityIncident ;
+    ex:hasThreat ex:Threat_Ransomware__Mitre_T1486___Data_Encrypted_For_Impact___Enisa_Threat_Landscape ;
+    ex:incidentDate "2024-11-28"^^xsd:date ;
+    ex:incidentId "INC-2024-0023"^^xsd:string ;
+    ex:involvesSector ex:Sector_Trasporti_E_Logistica ;
+    ex:targetsCompany ex:Company_Nordest_Container_Terminal_S_R_L .
+
+ex:Incident_Inc_2024_0024 a ex:SecurityIncident ;
+    ex:hasThreat ex:Threat_Phishing___Social_Engineering__Mitre_T1566___Phishing___Enisa_Social_Engineering ;
+    ex:incidentDate "2026-04-04"^^xsd:date ;
+    ex:incidentId "INC-2024-0024"^^xsd:string ;
+    ex:involvesSector ex:Sector_Turismo_E_Ristorazione ;
+    ex:targetsCompany ex:Company_G_E_P____Gestione_Esercizi_Pubblici___S_R_L .
+
+ex:Incident_Inc_2024_0028 a ex:SecurityIncident ;
+    ex:hasThreat ex:Threat_Data_Breach___Exfiltration__Mitre_T1048___Exfiltration___Enisa_Information_Leakage ;
+    ex:incidentDate "2026-02-01"^^xsd:date ;
+    ex:incidentId "INC-2024-0028"^^xsd:string ;
+    ex:involvesSector ex:Sector_Turismo_E_Ristorazione ;
+    ex:targetsCompany ex:Company_Tuzi_Fabio___Valle_Del_Rio .
+
+ex:Incident_Inc_2024_0032 a ex:SecurityIncident ;
+    ex:hasThreat ex:Threat_Phishing___Social_Engineering__Mitre_T1566___Phishing___Enisa_Social_Engineering ;
+    ex:incidentDate "2025-10-04"^^xsd:date ;
+    ex:incidentId "INC-2024-0032"^^xsd:string ;
+    ex:involvesSector ex:Sector_Costruzioni ;
+    ex:targetsCompany ex:Company_Costruzioni_Stamera_S_R_L .
+
+ex:Incident_Inc_2024_0035 a ex:SecurityIncident ;
+    ex:hasThreat ex:Threat_Phishing___Social_Engineering__Mitre_T1566___Phishing___Enisa_Social_Engineering ;
+    ex:incidentDate "2026-01-08"^^xsd:date ;
+    ex:incidentId "INC-2024-0035"^^xsd:string ;
+    ex:involvesSector ex:Sector_Trasporti_E_Logistica ;
+    ex:targetsCompany ex:Company_Nordest_Container_Terminal_S_R_L .
+
+ex:Incident_Inc_2024_0038 a ex:SecurityIncident ;
+    ex:hasThreat ex:Threat_Data_Breach___Exfiltration__Mitre_T1048___Exfiltration___Enisa_Information_Leakage ;
+    ex:incidentDate "2024-01-04"^^xsd:date ;
+    ex:incidentId "INC-2024-0038"^^xsd:string ;
+    ex:involvesSector ex:Sector_Manifatturiero ;
+    ex:targetsCompany ex:Company_Meccanica_Precisione_Brianza_S_R_L .
+
+ex:Incident_Inc_2024_0041 a ex:SecurityIncident ;
+    ex:hasThreat ex:Threat_Business_Email_Compromise__Mitre_T1534___Internal_Spearphishing___Enisa_Bec ;
+    ex:incidentDate "2025-01-17"^^xsd:date ;
+    ex:incidentId "INC-2024-0041"^^xsd:string ;
+    ex:involvesSector ex:Sector_Costruzioni ;
+    ex:targetsCompany ex:Company_Costruzioni_Stamera_S_R_L .
+
+ex:Incident_Inc_2024_0043 a ex:SecurityIncident ;
+    ex:hasThreat ex:Threat_Data_Breach___Exfiltration__Mitre_T1048___Exfiltration___Enisa_Information_Leakage ;
+    ex:incidentDate "2025-01-06"^^xsd:date ;
+    ex:incidentId "INC-2024-0043"^^xsd:string ;
+    ex:involvesSector ex:Sector_Istruzione ;
+    ex:targetsCompany ex:Company_Apro_Formazione_S_C_A_R_L .
+
+ex:Incident_Inc_2024_0044 a ex:SecurityIncident ;
+    ex:hasThreat ex:Threat_Ot_Scada_Disruption__Mitre_Att_Ck_For_Ics___Enisa_Critical_Infrastructure_Attack ;
+    ex:incidentDate "2024-09-03"^^xsd:date ;
+    ex:incidentId "INC-2024-0044"^^xsd:string ;
+    ex:involvesSector ex:Sector_Turismo_E_Ristorazione ;
+    ex:targetsCompany ex:Company_G_E_P____Gestione_Esercizi_Pubblici___S_R_L .
+
+ex:Incident_Inc_2024_0045 a ex:SecurityIncident ;
+    ex:hasThreat ex:Threat_Phishing___Social_Engineering__Mitre_T1566___Phishing___Enisa_Social_Engineering ;
+    ex:incidentDate "2026-01-19"^^xsd:date ;
+    ex:incidentId "INC-2024-0045"^^xsd:string ;
+    ex:involvesSector ex:Sector_Turismo_E_Ristorazione ;
+    ex:targetsCompany ex:Company_Il_Poeta_Contadino_Di_Marco_Leonardo_Antonio .
+
+ex:Incident_Inc_2025_0009 a ex:SecurityIncident ;
+    ex:hasThreat ex:Threat_Distributed_Denial_Of_Service__Mitre_T1498___Network_Dos___Enisa_Denial_Of_Service ;
+    ex:incidentDate "2024-10-11"^^xsd:date ;
+    ex:incidentId "INC-2025-0009"^^xsd:string ;
+    ex:involvesSector ex:Sector_Trasporti_E_Logistica ;
+    ex:targetsCompany ex:Company_Omnia_Logistica_Integrata_S_P_A .
+
+ex:Incident_Inc_2025_0011 a ex:SecurityIncident ;
+    ex:hasThreat ex:Threat_Ot_Scada_Disruption__Mitre_Att_Ck_For_Ics___Enisa_Critical_Infrastructure_Attack ;
+    ex:incidentDate "2025-01-02"^^xsd:date ;
+    ex:incidentId "INC-2025-0011"^^xsd:string ;
+    ex:involvesSector ex:Sector_Istruzione ;
+    ex:targetsCompany ex:Company_Apro_Formazione_S_C_A_R_L .
+
+ex:Incident_Inc_2025_0012 a ex:SecurityIncident ;
+    ex:hasThreat ex:Threat_Credential_Stuffing___Brute_Force__Mitre_T1110___Brute_Force___Enisa_Identity_Theft ;
+    ex:incidentDate "2026-01-17"^^xsd:date ;
+    ex:incidentId "INC-2025-0012"^^xsd:string ;
+    ex:involvesSector ex:Sector_Turismo_E_Ristorazione ;
+    ex:targetsCompany ex:Company_G_E_P____Gestione_Esercizi_Pubblici___S_R_L .
+
+ex:Incident_Inc_2025_0015 a ex:SecurityIncident ;
+    ex:hasThreat ex:Threat_Ransomware__Mitre_T1486___Data_Encrypted_For_Impact___Enisa_Threat_Landscape ;
+    ex:incidentDate "2024-07-15"^^xsd:date ;
+    ex:incidentId "INC-2025-0015"^^xsd:string ;
+    ex:involvesSector ex:Sector_Sanità ;
+    ex:targetsCompany ex:Company_Pharmacare_Distribuzione_S_R_L .
+
+ex:Incident_Inc_2025_0018 a ex:SecurityIncident ;
+    ex:hasThreat ex:Threat_Phishing___Social_Engineering__Mitre_T1566___Phishing___Enisa_Social_Engineering ;
+    ex:incidentDate "2025-10-12"^^xsd:date ;
+    ex:incidentId "INC-2025-0018"^^xsd:string ;
+    ex:involvesSector ex:Sector_Manifatturiero ;
+    ex:targetsCompany ex:Company_Meccanica_Precisione_Brianza_S_R_L .
+
+ex:Incident_Inc_2025_0019 a ex:SecurityIncident ;
+    ex:hasThreat ex:Threat_Phishing___Social_Engineering__Mitre_T1566___Phishing___Enisa_Social_Engineering ;
+    ex:incidentDate "2025-11-17"^^xsd:date ;
+    ex:incidentId "INC-2025-0019"^^xsd:string ;
+    ex:involvesSector ex:Sector_Tecnologico ;
+    ex:targetsCompany ex:Company_Ciarcia_Nunzio .
+
+ex:Incident_Inc_2025_0022 a ex:SecurityIncident ;
+    ex:hasThreat ex:Threat_Business_Email_Compromise__Mitre_T1534___Internal_Spearphishing___Enisa_Bec ;
+    ex:incidentDate "2024-10-03"^^xsd:date ;
+    ex:incidentId "INC-2025-0022"^^xsd:string ;
+    ex:involvesSector ex:Sector_Finanza_E_Assicurazioni ;
+    ex:targetsCompany ex:Company_Banca_Popolare_Dell_Adriatico_S_C_A_R_L .
+
+ex:Incident_Inc_2025_0025 a ex:SecurityIncident ;
+    ex:hasThreat ex:Threat_Ot_Scada_Disruption__Mitre_Att_Ck_For_Ics___Enisa_Critical_Infrastructure_Attack ;
+    ex:incidentDate "2024-08-04"^^xsd:date ;
+    ex:incidentId "INC-2025-0025"^^xsd:string ;
+    ex:involvesSector ex:Sector_Turismo_E_Ristorazione ;
+    ex:targetsCompany ex:Company_Il_Poeta_Contadino_Di_Marco_Leonardo_Antonio .
+
+ex:Incident_Inc_2025_0027 a ex:SecurityIncident ;
+    ex:hasThreat ex:Threat_Phishing___Social_Engineering__Mitre_T1566___Phishing___Enisa_Social_Engineering ;
+    ex:incidentDate "2025-04-14"^^xsd:date ;
+    ex:incidentId "INC-2025-0027"^^xsd:string ;
+    ex:involvesSector ex:Sector_Tecnologico ;
+    ex:targetsCompany ex:Company_Aerospace_Dynamics_Italia_S_R_L .
+
+ex:Incident_Inc_2025_0030 a ex:SecurityIncident ;
+    ex:hasThreat ex:Threat_Distributed_Denial_Of_Service__Mitre_T1498___Network_Dos___Enisa_Denial_Of_Service ;
+    ex:incidentDate "2024-08-12"^^xsd:date ;
+    ex:incidentId "INC-2025-0030"^^xsd:string ;
+    ex:involvesSector ex:Sector_Sanità ;
+    ex:targetsCompany ex:Company_Salus_Medica_Diagnostica_S_R_L .
+
+ex:Incident_Inc_2025_0034 a ex:SecurityIncident ;
+    ex:hasThreat ex:Threat_Business_Email_Compromise__Mitre_T1534___Internal_Spearphishing___Enisa_Bec ;
+    ex:incidentDate "2025-04-24"^^xsd:date ;
+    ex:incidentId "INC-2025-0034"^^xsd:string ;
+    ex:involvesSector ex:Sector_Commercio_All_Ingrosso_E_Al_Dettaglio ;
+    ex:targetsCompany ex:Company_Emilia_Food_Trading_S_R_L .
+
+ex:Incident_Inc_2025_0047 a ex:SecurityIncident ;
+    ex:hasThreat ex:Threat_Phishing___Social_Engineering__Mitre_T1566___Phishing___Enisa_Social_Engineering ;
+    ex:incidentDate "2024-06-18"^^xsd:date ;
+    ex:incidentId "INC-2025-0047"^^xsd:string ;
+    ex:involvesSector ex:Sector_Costruzioni ;
+    ex:targetsCompany ex:Company_Edilizia_Moderna_Veneta_S_P_A .
+
+ex:Incident_Inc_2025_0050 a ex:SecurityIncident ;
+    ex:hasThreat ex:Threat_Phishing___Social_Engineering__Mitre_T1566___Phishing___Enisa_Social_Engineering ;
+    ex:incidentDate "2025-04-07"^^xsd:date ;
+    ex:incidentId "INC-2025-0050"^^xsd:string ;
+    ex:involvesSector ex:Sector_Tecnologico ;
+    ex:targetsCompany ex:Company_Reti___Fibra_Connessioni_S_R_L .
+
+ex:Incident_Inc_2026_0001 a ex:SecurityIncident ;
+    ex:hasThreat ex:Threat_Supply_Chain_Compromise__Mitre_T1195___Supply_Chain___Enisa_Supply_Chain_Attacks ;
+    ex:incidentDate "2024-01-26"^^xsd:date ;
+    ex:incidentId "INC-2026-0001"^^xsd:string ;
+    ex:involvesSector ex:Sector_Istruzione ;
+    ex:targetsCompany ex:Company_Apro_Formazione_S_C_A_R_L .
+
+ex:Incident_Inc_2026_0003 a ex:SecurityIncident ;
+    ex:hasThreat ex:Threat_Business_Email_Compromise__Mitre_T1534___Internal_Spearphishing___Enisa_Bec ;
+    ex:incidentDate "2026-07-02"^^xsd:date ;
+    ex:incidentId "INC-2026-0003"^^xsd:string ;
+    ex:involvesSector ex:Sector_Sanità ;
+    ex:targetsCompany ex:Company_Lombarda_Strumenti_Chirurgici_S_P_A .
+
+ex:Incident_Inc_2026_0006 a ex:SecurityIncident ;
+    ex:hasThreat ex:Threat_Ot_Scada_Disruption__Mitre_Att_Ck_For_Ics___Enisa_Critical_Infrastructure_Attack ;
+    ex:incidentDate "2025-07-28"^^xsd:date ;
+    ex:incidentId "INC-2026-0006"^^xsd:string ;
+    ex:involvesSector ex:Sector_Energia ;
+    ex:targetsCompany ex:Company_E_S_Co__Berica_S_R_L .
+
+ex:Incident_Inc_2026_0007 a ex:SecurityIncident ;
+    ex:hasThreat ex:Threat_Data_Breach___Exfiltration__Mitre_T1048___Exfiltration___Enisa_Information_Leakage ;
+    ex:incidentDate "2025-07-12"^^xsd:date ;
+    ex:incidentId "INC-2026-0007"^^xsd:string ;
+    ex:involvesSector ex:Sector_Energia ;
+    ex:targetsCompany ex:Company_Cooperativa_Servizi_Ambientali_S_C_A_R_L .
+
+ex:Incident_Inc_2026_0013 a ex:SecurityIncident ;
+    ex:hasThreat ex:Threat_Insider_Threat__Mitre_T1078___Valid_Accounts___Enisa_Insider_Threats ;
+    ex:incidentDate "2026-08-02"^^xsd:date ;
+    ex:incidentId "INC-2026-0013"^^xsd:string ;
+    ex:involvesSector ex:Sector_Istruzione ;
+    ex:targetsCompany ex:Company_Apro_Formazione_S_C_A_R_L .
+
+ex:Incident_Inc_2026_0016 a ex:SecurityIncident ;
+    ex:hasThreat ex:Threat_Phishing___Social_Engineering__Mitre_T1566___Phishing___Enisa_Social_Engineering ;
+    ex:incidentDate "2026-03-02"^^xsd:date ;
+    ex:incidentId "INC-2026-0016"^^xsd:string ;
+    ex:involvesSector ex:Sector_Turismo_E_Ristorazione ;
+    ex:targetsCompany ex:Company_Tuzi_Fabio___Valle_Del_Rio .
+
+ex:Incident_Inc_2026_0020 a ex:SecurityIncident ;
+    ex:hasThreat ex:Threat_Distributed_Denial_Of_Service__Mitre_T1498___Network_Dos___Enisa_Denial_Of_Service ;
+    ex:incidentDate "2024-03-14"^^xsd:date ;
+    ex:incidentId "INC-2026-0020"^^xsd:string ;
+    ex:involvesSector ex:Sector_Tecnologico ;
+    ex:targetsCompany ex:Company_Aerospace_Dynamics_Italia_S_R_L .
+
+ex:Incident_Inc_2026_0021 a ex:SecurityIncident ;
+    ex:hasThreat ex:Threat_Distributed_Denial_Of_Service__Mitre_T1498___Network_Dos___Enisa_Denial_Of_Service ;
+    ex:incidentDate "2024-09-07"^^xsd:date ;
+    ex:incidentId "INC-2026-0021"^^xsd:string ;
+    ex:involvesSector ex:Sector_Sanità ;
+    ex:targetsCompany ex:Company_Lombarda_Strumenti_Chirurgici_S_P_A .
+
+ex:Incident_Inc_2026_0026 a ex:SecurityIncident ;
+    ex:hasThreat ex:Threat_Credential_Stuffing___Brute_Force__Mitre_T1110___Brute_Force___Enisa_Identity_Theft ;
+    ex:incidentDate "2024-08-05"^^xsd:date ;
+    ex:incidentId "INC-2026-0026"^^xsd:string ;
+    ex:involvesSector ex:Sector_Trasporti_E_Logistica ;
+    ex:targetsCompany ex:Company_Omnia_Logistica_Integrata_S_P_A .
+
+ex:Incident_Inc_2026_0029 a ex:SecurityIncident ;
+    ex:hasThreat ex:Threat_Ot_Scada_Disruption__Mitre_Att_Ck_For_Ics___Enisa_Critical_Infrastructure_Attack ;
+    ex:incidentDate "2025-03-14"^^xsd:date ;
+    ex:incidentId "INC-2026-0029"^^xsd:string ;
+    ex:involvesSector ex:Sector_Sanità ;
+    ex:targetsCompany ex:Company_Pharmacare_Distribuzione_S_R_L .
+
+ex:Incident_Inc_2026_0031 a ex:SecurityIncident ;
+    ex:hasThreat ex:Threat_Ransomware__Mitre_T1486___Data_Encrypted_For_Impact___Enisa_Threat_Landscape ;
+    ex:incidentDate "2026-02-12"^^xsd:date ;
+    ex:incidentId "INC-2026-0031"^^xsd:string ;
+    ex:involvesSector ex:Sector_Tecnologico ;
+    ex:targetsCompany ex:Company_Agribio_Consorzio_Cooperativo .
+
+ex:Incident_Inc_2026_0033 a ex:SecurityIncident ;
+    ex:hasThreat ex:Threat_Ot_Scada_Disruption__Mitre_Att_Ck_For_Ics___Enisa_Critical_Infrastructure_Attack ;
+    ex:incidentDate "2025-09-02"^^xsd:date ;
+    ex:incidentId "INC-2026-0033"^^xsd:string ;
+    ex:involvesSector ex:Sector_Energia ;
+    ex:targetsCompany ex:Company_Hydrogen_Power_Solutions_S_R_L .
+
+ex:Incident_Inc_2026_0036 a ex:SecurityIncident ;
+    ex:hasThreat ex:Threat_Data_Breach___Exfiltration__Mitre_T1048___Exfiltration___Enisa_Information_Leakage ;
+    ex:incidentDate "2026-02-07"^^xsd:date ;
+    ex:incidentId "INC-2026-0036"^^xsd:string ;
+    ex:involvesSector ex:Sector_Costruzioni ;
+    ex:targetsCompany ex:Company_Edilizia_Moderna_Veneta_S_P_A .
+
+ex:Incident_Inc_2026_0037 a ex:SecurityIncident ;
+    ex:hasThreat ex:Threat_Phishing___Social_Engineering__Mitre_T1566___Phishing___Enisa_Social_Engineering ;
+    ex:incidentDate "2024-04-24"^^xsd:date ;
+    ex:incidentId "INC-2026-0037"^^xsd:string ;
+    ex:involvesSector ex:Sector_Trasporti_E_Logistica ;
+    ex:targetsCompany ex:Company_Omnia_Logistica_Integrata_S_P_A .
+
+ex:Incident_Inc_2026_0039 a ex:SecurityIncident ;
+    ex:hasThreat ex:Threat_Phishing___Social_Engineering__Mitre_T1566___Phishing___Enisa_Social_Engineering ;
+    ex:incidentDate "2024-07-01"^^xsd:date ;
+    ex:incidentId "INC-2026-0039"^^xsd:string ;
+    ex:involvesSector ex:Sector_Commercio_All_Ingrosso_E_Al_Dettaglio ;
+    ex:targetsCompany ex:Company_Smart_Retail_System_S_R_L .
+
+ex:Incident_Inc_2026_0040 a ex:SecurityIncident ;
+    ex:hasThreat ex:Threat_Ot_Scada_Disruption__Mitre_Att_Ck_For_Ics___Enisa_Critical_Infrastructure_Attack ;
+    ex:incidentDate "2026-05-11"^^xsd:date ;
+    ex:incidentId "INC-2026-0040"^^xsd:string ;
+    ex:involvesSector ex:Sector_Tecnologico ;
+    ex:targetsCompany ex:Company_Theoresi_S_R_L .
+
+ex:Incident_Inc_2026_0042 a ex:SecurityIncident ;
+    ex:hasThreat ex:Threat_Ot_Scada_Disruption__Mitre_Att_Ck_For_Ics___Enisa_Critical_Infrastructure_Attack ;
+    ex:incidentDate "2025-09-05"^^xsd:date ;
+    ex:incidentId "INC-2026-0042"^^xsd:string ;
+    ex:involvesSector ex:Sector_Energia ;
+    ex:targetsCompany ex:Company_E_S_Co__Berica_S_R_L .
+
+ex:Incident_Inc_2026_0046 a ex:SecurityIncident ;
+    ex:hasThreat ex:Threat_Business_Email_Compromise__Mitre_T1534___Internal_Spearphishing___Enisa_Bec ;
+    ex:incidentDate "2024-05-08"^^xsd:date ;
+    ex:incidentId "INC-2026-0046"^^xsd:string ;
+    ex:involvesSector ex:Sector_Commercio_All_Ingrosso_E_Al_Dettaglio ;
+    ex:targetsCompany ex:Company_Smart_Retail_System_S_R_L .
+
+ex:Incident_Inc_2026_0048 a ex:SecurityIncident ;
+    ex:hasThreat ex:Threat_Supply_Chain_Compromise__Mitre_T1195___Supply_Chain___Enisa_Supply_Chain_Attacks ;
+    ex:incidentDate "2024-08-04"^^xsd:date ;
+    ex:incidentId "INC-2026-0048"^^xsd:string ;
+    ex:involvesSector ex:Sector_Energia ;
+    ex:targetsCompany ex:Company_Hydrogen_Power_Solutions_S_R_L .
+
+ex:Incident_Inc_2026_0049 a ex:SecurityIncident ;
+    ex:hasThreat ex:Threat_Exploitation_Of_Public_Facing_Application__Mitre_T1190___Enisa_Vulnerability_Exploitation ;
+    ex:incidentDate "2025-02-12"^^xsd:date ;
+    ex:incidentId "INC-2026-0049"^^xsd:string ;
+    ex:involvesSector ex:Sector_Tecnologico ;
+    ex:targetsCompany ex:Company_Theoresi_S_R_L .
+
+ex:Threat_Exploitation_Of_Public_Facing_Application__Mitre_T1190___Enisa_Vulnerability_Exploitation a ex:Threat ;
+    rdfs:label "Exploitation of Public-Facing Application (MITRE T1190 / ENISA Vulnerability Exploitation)"^^xsd:string .
+
+ex:Threat_Insider_Threat__Mitre_T1078___Valid_Accounts___Enisa_Insider_Threats a ex:Threat ;
+    rdfs:label "Insider Threat (MITRE T1078 - Valid Accounts / ENISA Insider Threats)"^^xsd:string .
+
+ex:Company_Aerospace_Dynamics_Italia_S_R_L a ex:Company ;
+    ex:denominazione "AeroSpace Dynamics Italia S.r.l."^^xsd:string ;
+    ex:dimensioneAziendale ex:Dimensione_PICCOLA ;
+    ex:hasAssignedSector ex:Sector_Tecnologico ;
+    ex:hasIncident ex:Incident_Inc_2025_0027,
+        ex:Incident_Inc_2026_0020 .
+
+ex:Company_E_S_Co__Berica_S_R_L a ex:Company ;
+    ex:denominazione "E.s.Co. Berica S.r.l."^^xsd:string ;
+    ex:dimensioneAziendale ex:Dimensione_PICCOLA ;
+    ex:hasAssignedSector ex:Sector_Energia ;
+    ex:hasIncident ex:Incident_Inc_2026_0006,
+        ex:Incident_Inc_2026_0042 .
+
+ex:Company_Hydrogen_Power_Solutions_S_R_L a ex:Company ;
+    ex:denominazione "HydroGen Power Solutions S.r.l."^^xsd:string ;
+    ex:dimensioneAziendale ex:Dimensione_PICCOLA ;
+    ex:hasAssignedSector ex:Sector_Energia ;
+    ex:hasIncident ex:Incident_Inc_2026_0033,
+        ex:Incident_Inc_2026_0048 .
+
+ex:Company_Lombarda_Strumenti_Chirurgici_S_P_A a ex:Company ;
+    ex:denominazione "Lombarda Strumenti Chirurgici S.p.A."^^xsd:string ;
+    ex:dimensioneAziendale ex:Dimensione_MEDIA ;
+    ex:hasAssignedSector ex:Sector_Sanità ;
+    ex:hasIncident ex:Incident_Inc_2026_0003,
+        ex:Incident_Inc_2026_0021 .
+
+ex:Company_Meccanica_Precisione_Brianza_S_R_L a ex:Company ;
+    ex:denominazione "Meccanica Precisione Brianza S.r.l."^^xsd:string ;
+    ex:dimensioneAziendale ex:Dimensione_PICCOLA ;
+    ex:hasAssignedSector ex:Sector_Manifatturiero ;
+    ex:hasIncident ex:Incident_Inc_2024_0038,
+        ex:Incident_Inc_2025_0018 .
+
+ex:Company_Nordest_Container_Terminal_S_R_L a ex:Company ;
+    ex:denominazione "NordEst Container Terminal S.r.l."^^xsd:string ;
+    ex:dimensioneAziendale ex:Dimensione_GRANDE,
+        ex:Dimensione_PICCOLA ;
+    ex:hasAssignedSector ex:Sector_Trasporti_E_Logistica ;
+    ex:hasIncident ex:Incident_Inc_2024_0023,
+        ex:Incident_Inc_2024_0035 .
+
+ex:Company_Theoresi_S_R_L a ex:Company ;
+    ex:denominazione "Theoresi S.r.l."^^xsd:string ;
+    ex:dimensioneAziendale ex:Dimensione_PICCOLA ;
+    ex:hasAssignedSector ex:Sector_Tecnologico ;
+    ex:hasIncident ex:Incident_Inc_2026_0040,
+        ex:Incident_Inc_2026_0049 .
+
+ex:Sector_Finanza_E_Assicurazioni a ex:Sector ;
+    rdfs:label "Finanza e assicurazioni"^^xsd:string .
+
+ex:Threat_Credential_Stuffing___Brute_Force__Mitre_T1110___Brute_Force___Enisa_Identity_Theft a ex:Threat ;
+    rdfs:label "Credential Stuffing & Brute Force (MITRE T1110 - Brute Force / ENISA Identity Theft)"^^xsd:string .
+
+ex:Threat_Supply_Chain_Compromise__Mitre_T1195___Supply_Chain___Enisa_Supply_Chain_Attacks a ex:Threat ;
+    rdfs:label "Supply Chain Compromise (MITRE T1195 - Supply Chain / ENISA Supply Chain Attacks)"^^xsd:string .
+
+ex:Company_Costruzioni_Stamera_S_R_L a ex:Company ;
+    ex:denominazione "Costruzioni Stamera S.r.l."^^xsd:string ;
+    ex:dimensioneAziendale ex:Dimensione_GRANDE,
+        ex:Dimensione_PICCOLA ;
+    ex:hasAssignedSector ex:Sector_Costruzioni ;
+    ex:hasIncident ex:Incident_Inc_2024_0002,
+        ex:Incident_Inc_2024_0032,
+        ex:Incident_Inc_2024_0041 .
+
+ex:Company_Edilizia_Moderna_Veneta_S_P_A a ex:Company ;
+    ex:denominazione "Edilizia Moderna Veneta S.p.A."^^xsd:string ;
+    ex:dimensioneAziendale ex:Dimensione_MEDIA,
+        ex:Dimensione_PICCOLA ;
+    ex:hasAssignedSector ex:Sector_Costruzioni ;
+    ex:hasIncident ex:Incident_Inc_2024_0014,
+        ex:Incident_Inc_2025_0047,
+        ex:Incident_Inc_2026_0036 .
+
+ex:Company_G_E_P____Gestione_Esercizi_Pubblici___S_R_L a ex:Company ;
+    ex:denominazione "G.e.p. - Gestione Esercizi Pubblici - S.r.l."^^xsd:string ;
+    ex:dimensioneAziendale ex:Dimensione_GRANDE,
+        ex:Dimensione_PICCOLA ;
+    ex:hasAssignedSector ex:Sector_Turismo_E_Ristorazione ;
+    ex:hasIncident ex:Incident_Inc_2024_0024,
+        ex:Incident_Inc_2024_0044,
+        ex:Incident_Inc_2025_0012 .
+
+ex:Company_Il_Poeta_Contadino_Di_Marco_Leonardo_Antonio a ex:Company ;
+    ex:denominazione "Il Poeta Contadino Di Marco Leonardo Antonio"^^xsd:string ;
+    ex:dimensioneAziendale ex:Dimensione_PICCOLA ;
+    ex:hasAssignedSector ex:Sector_Turismo_E_Ristorazione ;
+    ex:hasIncident ex:Incident_Inc_2024_0005,
+        ex:Incident_Inc_2024_0045,
+        ex:Incident_Inc_2025_0025 .
+
+ex:Company_Omnia_Logistica_Integrata_S_P_A a ex:Company ;
+    ex:denominazione "Omnia Logistica Integrata S.p.A."^^xsd:string ;
+    ex:dimensioneAziendale ex:Dimensione_MEDIA,
+        ex:Dimensione_PICCOLA ;
+    ex:hasAssignedSector ex:Sector_Trasporti_E_Logistica ;
+    ex:hasIncident ex:Incident_Inc_2025_0009,
+        ex:Incident_Inc_2026_0026,
+        ex:Incident_Inc_2026_0037 .
+
+ex:Company_Pharmacare_Distribuzione_S_R_L a ex:Company ;
+    ex:denominazione "PharmaCare Distribuzione S.r.l."^^xsd:string ;
+    ex:dimensioneAziendale ex:Dimensione_MEDIA,
+        ex:Dimensione_PICCOLA ;
+    ex:hasAssignedSector ex:Sector_Sanità ;
+    ex:hasIncident ex:Incident_Inc_2024_0004,
+        ex:Incident_Inc_2025_0015,
+        ex:Incident_Inc_2026_0029 .
+
+ex:Company_Tuzi_Fabio___Valle_Del_Rio a ex:Company ;
+    ex:denominazione "Tuzi Fabio - Valle del Rio"^^xsd:string ;
+    ex:dimensioneAziendale ex:Dimensione_PICCOLA ;
+    ex:hasAssignedSector ex:Sector_Turismo_E_Ristorazione ;
+    ex:hasIncident ex:Incident_Inc_2024_0017,
+        ex:Incident_Inc_2024_0028,
+        ex:Incident_Inc_2026_0016 .
+
+ex:Sector_Manifatturiero a ex:Sector ;
+    rdfs:label "Manifatturiero"^^xsd:string .
+
+ex:Company_Apro_Formazione_S_C_A_R_L a ex:Company ;
+    ex:denominazione "Apro Formazione S.c.a.r.l."^^xsd:string ;
+    ex:dimensioneAziendale ex:Dimensione_MEDIA,
+        ex:Dimensione_PICCOLA ;
+    ex:hasAssignedSector ex:Sector_Istruzione ;
+    ex:hasIncident ex:Incident_Inc_2024_0043,
+        ex:Incident_Inc_2025_0011,
+        ex:Incident_Inc_2026_0001,
+        ex:Incident_Inc_2026_0013 .
+
+ex:Company_Smart_Retail_System_S_R_L a ex:Company ;
+    ex:denominazione "Smart Retail System S.r.l."^^xsd:string ;
+    ex:dimensioneAziendale ex:Dimensione_GRANDE,
+        ex:Dimensione_MEDIA ;
+    ex:hasAssignedSector ex:Sector_Commercio_All_Ingrosso_E_Al_Dettaglio ;
+    ex:hasIncident ex:Incident_Inc_2024_0008,
+        ex:Incident_Inc_2024_0010,
+        ex:Incident_Inc_2026_0039,
+        ex:Incident_Inc_2026_0046 .
+
+ex:Threat_Distributed_Denial_Of_Service__Mitre_T1498___Network_Dos___Enisa_Denial_Of_Service a ex:Threat ;
+    rdfs:label "Distributed Denial of Service (MITRE T1498 - Network DoS / ENISA Denial of Service)"^^xsd:string .
+
+ex:Threat_Ransomware__Mitre_T1486___Data_Encrypted_For_Impact___Enisa_Threat_Landscape a ex:Threat ;
+    rdfs:label "Ransomware (MITRE T1486 - Data Encrypted for Impact / ENISA Threat Landscape)"^^xsd:string .
+
+ex:Sector_Istruzione a ex:Sector ;
+    rdfs:label "Istruzione"^^xsd:string .
+
+ex:Threat_Data_Breach___Exfiltration__Mitre_T1048___Exfiltration___Enisa_Information_Leakage a ex:Threat ;
+    rdfs:label "Data Breach & Exfiltration (MITRE T1048 - Exfiltration / ENISA Information Leakage)"^^xsd:string .
+
+ex:Sector_Commercio_All_Ingrosso_E_Al_Dettaglio a ex:Sector ;
+    rdfs:label "Commercio all'ingrosso e al dettaglio"^^xsd:string .
+
+ex:Sector_Trasporti_E_Logistica a ex:Sector ;
+    rdfs:label "Trasporti e logistica"^^xsd:string .
+
+ex:Threat_Business_Email_Compromise__Mitre_T1534___Internal_Spearphishing___Enisa_Bec a ex:Threat ;
+    rdfs:label "Business Email Compromise (MITRE T1534 - Internal Spearphishing / ENISA BEC)"^^xsd:string .
+
+ex:Sector_Costruzioni a ex:Sector ;
+    rdfs:label "Costruzioni"^^xsd:string .
+
+ex:Sector_Energia a ex:Sector ;
+    rdfs:label "Energia"^^xsd:string .
+
+ex:Sector_Sanità a ex:Sector ;
+    rdfs:label "Sanità"^^xsd:string .
+
+ex:Threat_Ot_Scada_Disruption__Mitre_Att_Ck_For_Ics___Enisa_Critical_Infrastructure_Attack a ex:Threat ;
+    rdfs:label "OT/SCADA Disruption (MITRE ATT&CK for ICS / ENISA Critical Infrastructure Attack)"^^xsd:string .
+
+ex:Sector_Tecnologico a ex:Sector ;
+    rdfs:label "Tecnologico"^^xsd:string .
+
+ex:Sector_Turismo_E_Ristorazione a ex:Sector ;
+    rdfs:label "Turismo e ristorazione"^^xsd:string .
+
+ex:Threat_Phishing___Social_Engineering__Mitre_T1566___Phishing___Enisa_Social_Engineering a ex:Threat ;
+    rdfs:label "Phishing & Social Engineering (MITRE T1566 - Phishing / ENISA Social Engineering)"^^xsd:string .
+
