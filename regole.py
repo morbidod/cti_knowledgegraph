@@ -20,6 +20,9 @@ PRINCIPIO GENERALE DI DISAMBIGUAZIONE MERCEOLOGICA:
      * Gestori strutturati di Datacenter enterprise, fornitori di connettività di dorsale o architetture di cybersecurity avanzata / MSSP.
    - Per tutti gli altri operatori IT ordinari di piccole dimensioni -> Usa 'Altre società private'.
 """
+REGOLA_COERENZA_INTRA_DIVISIONE_ATECO =""" 
+         Se il codice ATECO verificato condivide le prime 2 cifre con il codice ATECO storico (stessa Divisione ATECO, ad esempio 10.2 e 10.85.02 entrambi nella Divisione 10), imposta SEMPRE `"incoerenza_ateco": false` (si tratta di semplice affinamento merceologico intra-divisione, non di un disallineamento).
+         """
 
 REGOLA_SETTORE_SPECIFICA= """
          Fondazioni senza scopo di lucro, Ordini di professionisti -> Organizzazioni associative

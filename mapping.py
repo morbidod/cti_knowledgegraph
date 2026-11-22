@@ -60,6 +60,25 @@ def traduci_settore_nis(lista_settori_holistic):
     lista_settori = [mappa_traduzione.get(nome_settore, nome_settore) for nome_settore in lista_settori_holistic]
     return lista_settori
 
+MAPPA_SETTORI_ATECO_HOLISTIC ={
+    'Manifattura':'Manifatturiero',
+    'Sanità':'Sanitario',
+    'Altre aziende private': 'Altre società private',
+    'Altre aziende pubbliche':'Altre società pubbliche',
+    'Automotive':'Automobilistico',
+    'Comunicazioni':'Comunicazione',
+    'Difesa':'Aziende operanti nel settore difesa',
+    'Farmaceutici':'Farmaceutico',
+    'Governativo locale':'Pubblica amministrazione locale',
+    'Governativo nazionale':'Pubblica amministrazione centrale',
+    'Infrastrutture di fornitura e distribuzione di Acqua potabile':'Fornitura di acqua potabile',
+    'Manifattura':'andManifatturiero',
+    'No profit':'Organizzazioni associative',
+    'Servizi di emergenza e sanitificazione':'Servizi di sanificazione',
+    'Utilità':'Società di servizi pubblici',
+    'Vendita al dettaglio':	"Commercio all'ingrosso e al dettaglio",
+}
+
 def traduci_settore(nome_settore):
     mappa_traduzione = {
         "agriculture": "Agricoltura",

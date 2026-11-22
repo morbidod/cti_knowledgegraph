@@ -8,6 +8,24 @@ from typing import Optional
 
 import pandas as pd
 
+MAPPA_SETTORI_ATECO_HOLISTIC ={
+    'Sanità':'Sanitario',
+    'Altre aziende private': 'Altre società private',
+    'Altre aziende pubbliche':'Altre società pubbliche',
+    'Automotive':'Automobilistico',
+    'Comunicazioni':'Comunicazione',
+    'Difesa':'Aziende operanti nel settore difesa',
+    'Farmaceutici':'Farmaceutico',
+    'Governativo locale':'Pubblica amministrazione locale',
+    'Governativo nazionale':'Pubblica amministrazione centrale',
+    'Infrastrutture di fornitura e distribuzione di Acqua potabile':'Fornitura di acqua potabile',
+    'Manifattura':'Manifatturiero',
+    'No profit':'Organizzazioni associative',
+    'Servizi di emergenza e sanitificazione':'Servizi di sanificazione',
+    'Utilità':'Società di servizi pubblici',
+    'Vendita al dettaglio':	"Commercio all'ingrosso e al dettaglio",
+}
+
 # nome_campo_interno -> possibili nomi di colonna nel CSV (case-insensitive, il primo trovato vince)
 _GUESSES = {
     "id": ["id", "guid", "guid_holistic", "identificativo"],
@@ -124,6 +142,7 @@ class CsvDB:
         idcol = self.map["id"]
         self.df[idcol] = self.df[idcol].astype(str).str.strip()
         self.df = self.df.drop_duplicates(subset=[idcol], keep=keep)
+        self.df['target_sector']=self.df['target_sector'].map(MAPPA_SETTORI_ATECO_HOLISTIC)
         self._by_id = self.df.set_index(idcol, drop=False).to_dict(orient="index")
 
     def _report(self, path: str) -> None:
