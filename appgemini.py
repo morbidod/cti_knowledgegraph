@@ -1,6 +1,6 @@
 import ast
 import hashlib
-import community.community_louvain as community_louvain
+from networkx.algorithms.community import louvain_communities
 import matplotlib.pyplot as plt
 from pyvis.network import Network
 import streamlit.components.v1 as components
@@ -319,7 +319,8 @@ for _, row in df_filtrato.iterrows():
     else:
       G.add_edge(nodo_profilo, m, weight=1)
 
-partition = community_louvain.best_partition(G, weight="weight") if len(G) > 0 else {}
+communities = louvain_communities(G, weight="weight", seed=42)
+partition = {node: cid for cid, comm in enumerate(communities) for node in comm}
 
 for u, v, data in G.edges(data=True):
   if G.nodes[u]["node_type"] == "profilo":
@@ -378,15 +379,25 @@ def build_rdf_graph(df_input: pd.DataFrame, _partition: dict, _nx_graph) -> Grap
     g.add((m_uri, RDFS.label, Literal(macro, datatype=XSD.string)))
     g.add((s_uri, ACN.belongsToMacro, m_uri))
 
-  # C. Materializzazione Louvain Communities nel Grafo RDF
+# C. Materializzazione Louvain Communities nel Grafo RDF (su profilo Settore-Dimensione)
   for node, comm_id in _partition.items():
     comm_uri = ACN[f"community_{comm_id}"]
     g.add((comm_uri, RDF.type, ACN.ThreatCommunity))
     g.add((comm_uri, ACN.communityId, Literal(int(comm_id), datatype=XSD.integer)))
+
     if _nx_graph.nodes[node].get("node_type") == "profilo":
       sec_name = _nx_graph.nodes[node]["settore"]
+      dim_name = _nx_graph.nodes[node]["dimensione"]
+
       sec_uri = ACN[f"sector_{slugify(sec_name)}"]
-      g.add((sec_uri, ACN.belongsToCommunity, comm_uri))
+      prof_uri = ACN[f"profile_{slugify(sec_name)}_{slugify(dim_name)}"]
+
+      g.add((prof_uri, RDF.type, ACN.SectorSizeProfile))
+      g.add((prof_uri, RDFS.label, Literal(f"{sec_name} ({dim_name})", datatype=XSD.string)))
+      g.add((prof_uri, ACN.hasSector, sec_uri))
+      g.add((prof_uri, ACN.dimensione, Literal(dim_name, datatype=XSD.string)))
+      g.add((prof_uri, ACN.belongsToCommunity, comm_uri))
+
     elif _nx_graph.nodes[node].get("node_type") == "minaccia":
       t_uri = ACN[f"threat_{slugify(node)}"]
       g.add((t_uri, ACN.characterizesCommunity, comm_uri))
@@ -416,7 +427,8 @@ def build_rdf_graph(df_input: pd.DataFrame, _partition: dict, _nx_graph) -> Grap
     g.add((org_uri, RDFS.label, Literal(soggetto, datatype=XSD.string)))
     g.add((org_uri, ACN.hasSector, sec_uri))
     g.add((org_uri, ACN.dimensione, Literal(dimensione, datatype=XSD.string)))
-    g.add((org_uri, ACN.region, Literal(regione, datatype=XSD.string)))
+    prof_uri = ACN[f"profile_{slugify(settore)}_{slugify(dimensione)}"]
+    g.add((org_uri, ACN.hasProfile, prof_uri))
 
     # Triplificazione Incidente
     g.add((inc_uri, RDF.type, UCO.Incident))
@@ -957,3 +969,6 @@ with tab7:
         for r in kg.query(query_src)
     ]
     st.dataframe(pd.DataFrame(src_rows), use_container_width=True)
+
+if __name__=="__main__":
+  print('hello')
